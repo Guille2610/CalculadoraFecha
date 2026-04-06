@@ -1,3 +1,104 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.date-picker {
+    width: 325;
+    height: 175;
+    padding: 10;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(14, 14, 14, 0.599);
+    border-color: whitesmoke;
+    border-width: 2;
+    border-radius: 10;
+    vertical-align: middle;
+}
+
+.outputContainer {
+    height: 200;
+    white-space: normal;
+    text-align: center;
+    background-color: gray;
+    box-shadow: 0 4px 8px rgba(14, 14, 14, 0.599);
+    border-color: aliceblue;
+    border-width: 2;
+    border-radius: 10;
+    padding: 20;
+    font-size: 20;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20;
+}
+
+
+.functionsContainer {
+    white-space: normal;
+    text-align: center;
+    background-color: rgb(193, 193, 193);
+    box-shadow: 0 4px 8px rgba(14, 14, 14, 0.599);
+    border-color: 193, 193, 193;
+    border-width: 2;
+    border-radius: 10;
+    padding: 20;
+    font-size: 20;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20;
+}
+
+.dropdownContainer {
+    width: 200;
+    height: 50;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-size: 18;
+    padding: 10;
+    border-radius: 5;
+    margin-top: 10;
+    margin-bottom: 3;
+}
+
+
+.headerFunctions{
+    font-size: 20;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    padding: 10;
+}
+
+
+.h1 {
+    font-size: 24;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10;
+}
+.resultLbl {
+    font-size: 30;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+.h2 {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    font-size: 18;
+    color: black;
+    margin-top: 10;
+    margin-bottom: 5;
+}
+
+.calcularBtn {
+    width: 200;
+    height: 50;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18;
+    padding: 10;
+    border-radius: 5;
+    margin-top: 20;
+}
+.calcularBtn:active {
+    background-color: #0056b3;
+}

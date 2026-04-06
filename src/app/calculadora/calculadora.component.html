@@ -1,12 +1,30 @@
-<ActionBar title="CalculadoraFecha"> </ActionBar>
+<ActionBar title="CalculadoraFecha">Calculadora de Fechas</ActionBar>
 
 <GridLayout>
+    <ScrollView>
     <StackLayout>
-        <Label text="Fecha 1" class="h1" horizontalAlignment="center"></Label>
-        <DatePicker [(ngModel)]="fechaInicio" (dateChange)="onFechaInicioChange($event)"></DatePicker>
-        <Label text="Fecha 2" class="h1" horizontalAlignment="center"></Label>
-        <DatePicker [(ngModel)]="fechaFin" (dateChange)="onFechaFinChange($event)"></DatePicker>
-        <Button text="Calcular Fecha" (tap)="calcularFecha()"></Button>
-        <Label [text]="resultado" class="h2" horizontalAlignment="center"></Label>
+        <StackLayout class="functionsContainer">
+            <Label text="Ingrese la primera fecha:" class="headerFunctions" horizontalAlignment="Left"></Label>
+            <DatePicker class="date-picker" [(ngModel)]="fechaInicio" (dateChange)="onFechaInicioChange($event)"></DatePicker>
+            <Label text="Ingrese la segunda fecha:" class="headerFunctions" horizontalAlignment="Left"></Label>
+            <DatePicker class="date-picker" [(ngModel)]="fechaFin" (dateChange)="onFechaFinChange($event)"></DatePicker>
+            <Label text="Seleccione el formato" class="headerFunctions" horizontalAlignment="Left"></Label>
+            <StackLayout class="dropdownContainer">
+            <DropDown
+                [items]="opciones"
+                [selectedIndex]="selectedIndex"
+                (selectedIndexChanged)="onDropDownchange($event)"
+                class="dropDown">
+            </DropDown>
+                
+            </StackLayout>
+
+            <Button class = "calcularBtn"text="Calcular Fecha" (tap)="calcular()"></Button>
+        </StackLayout>
+        <StackLayout class="outputContainer">
+            <Label  text="Salida:" class="h1" horizontalAlignment="left"></Label>
+            <Label [text]="resultado" class="resultLbl" horizontalAlignment="center"></Label>
+        </StackLayout>
     </StackLayout>
+    </ScrollView>
 </GridLayout>
