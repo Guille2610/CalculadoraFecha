@@ -1,0 +1,12 @@
+<ActionBar title="CalculadoraFecha"> </ActionBar>
+
+<GridLayout>
+    <StackLayout>
+        <Label text="Fecha 1" class="h1" horizontalAlignment="center"></Label>
+        <DatePicker [(ngModel)]="fechaInicio" (dateChange)="onFechaInicioChange($event)"></DatePicker>
+        <Label text="Fecha 2" class="h1" horizontalAlignment="center"></Label>
+        <DatePicker [(ngModel)]="fechaFin" (dateChange)="onFechaFinChange($event)"></DatePicker>
+        <Button text="Calcular Fecha" (tap)="calcularFecha()"></Button>
+        <Label [text]="resultado" class="h2" horizontalAlignment="center"></Label>
+    </StackLayout>
+</GridLayout>
